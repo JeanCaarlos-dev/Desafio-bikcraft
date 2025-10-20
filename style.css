@@ -1,0 +1,138 @@
+:root {
+  --cinza-fundo: #f7f7f7;
+  --cinza-texto: #c6c6c6;
+  --vermelho: #ee2211;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cinza-fundo);
+  width: 100vw;
+  margin: 0;
+}
+
+.cabecalho,
+.corpo {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cabecalho {
+  text-align: center;
+  display: grid;
+}
+
+.titulo {
+  width: 300px;
+  margin: 40px auto;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  place-content: center;
+  padding: 0;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+a,
+footer,
+p {
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.corpo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.descricao {
+  display: grid;
+  place-content: start;
+  place-items: end right;
+  text-align: right;
+  padding: 30px;
+  background-color: white;
+}
+
+.descricao > h1 {
+  font-size: 2.8em;
+  margin-bottom: 0px;
+}
+
+.descricao > a {
+  padding: 15px 20px;
+}
+
+.descricao > .detalhe {
+  width: 70px;
+  height: 5px;
+  background-color: var(--vermelho);
+  position: relative;
+  left: 67px;
+}
+
+.descricao > div {
+  place-self: start left;
+  place-items: start;
+}
+
+.foto-bikcraft {
+  max-width: 100%;
+}
+
+.cor-destaque {
+  background-color: var(--vermelho);
+  color: white;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-bottom: 100px;
+
+  place-content: space-between;
+
+  padding: 100px 20px;
+  gap: 10px 20px;
+
+  background-color: white;
+}
+
+.titulo-vantagens {
+  font-size: 5em;
+  color: var(--cinza-texto);
+  text-align: right;
+  padding: 20px;
+  margin-top: 0;
+  place-self: center;
+}
+
+.info > img {
+  grid-column: 1;
+}
+.info > p {
+  grid-column: 2;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.info > h3 {
+  margin: 0;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+
+  background-color: white;
+}
