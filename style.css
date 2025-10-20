@@ -7,132 +7,135 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--cinza-fundo);
-  width: 100vw;
   margin: 0;
 }
 
-.cabecalho,
-.corpo {
-  max-width: 1200px;
-  margin: auto;
-}
-
 .cabecalho {
+  max-width: 1000px;
+  margin: 0px auto 40px auto;
   text-align: center;
-  display: grid;
 }
 
-.titulo {
-  width: 300px;
-  margin: 40px auto;
+.cabecalho > .titulo {
+  width: 250px;
+  margin: 40px;
 }
 
-menu {
-  list-style-type: none;
+.menu {
   display: flex;
-  place-content: center;
-  padding: 0;
-  gap: 40px;
-  margin-bottom: 100px;
-}
-
-a,
-footer,
-p {
-  font-size: 1.3em;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
 }
 
 a {
+  /* CONFIG TODOS OS BOTOES */
+  display: block;
   text-decoration: none;
-  color: black;
-  background-color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 4px;
 }
 
-.corpo {
+a,
+p {
+  font-size: 1.3rem;
+}
+
+.menu a {
+  background-color: white;
+  color: black;
+  border: 2px solid #ffffff00;
+}
+
+.menu a:hover {
+  border: 2px solid var(--vermelho);
+}
+
+.container-principal {
+  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: auto;
 }
 
-.descricao {
-  display: grid;
-  place-content: start;
-  place-items: end right;
-  text-align: right;
-  padding: 30px;
+.conteudo-bikcraft {
   background-color: white;
+  place-content: center;
+  justify-items: right;
+  text-align: right;
+  padding: 20px;
 }
 
-.descricao > h1 {
-  font-size: 2.8em;
-  margin-bottom: 0px;
-}
-
-.descricao > a {
-  padding: 15px 20px;
-}
-
-.descricao > .detalhe {
-  width: 70px;
-  height: 5px;
+.conteudo-bikcraft a {
   background-color: var(--vermelho);
-  position: relative;
-  left: 67px;
+  color: white;
 }
-
-.descricao > div {
-  place-self: start left;
-  place-items: start;
+.conteudo-bikcraft a:hover {
+  background-color: #aa2211;
 }
 
 .foto-bikcraft {
   max-width: 100%;
 }
 
-.cor-destaque {
-  background-color: var(--vermelho);
-  color: white;
-}
-
-.info {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  margin-bottom: 100px;
-
-  place-content: space-between;
-
-  padding: 100px 20px;
-  gap: 10px 20px;
-
-  background-color: white;
-}
+/* SEGUNDA PARTE */
 
 .titulo-vantagens {
-  font-size: 5em;
-  color: var(--cinza-texto);
+  font-size: 5rem;
+  padding: 20px;
   text-align: right;
-  padding: 20px;
-  margin-top: 0;
   place-self: center;
+  color: var(--cinza-texto);
+  background-image: url(/img/onda.svg);
+  background-size: 100%;
 }
 
-.info > img {
-  grid-column: 1;
-}
-.info > p {
-  grid-column: 2;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.info > h3 {
-  margin: 0;
-}
-
-.rodape {
-  text-align: center;
+.vantagens {
   padding: 20px;
-
   background-color: white;
+}
+
+.vantagem-itens {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1px;
+  border-left: 4px solid #ee221100;
+}
+
+.vantagem-itens:nth-child(even) {
+  background-color: var(--cinza-fundo);
+}
+
+.vantagem-itens:hover {
+  border-left: 4px solid var(--vermelho);
+  transition: 0.2s;
+}
+
+.vantagem-itens:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.vantagem-itens h3 {
+  margin: 5px 0px;
+}
+
+.vantagem-itens p {
+  grid-column: 2;
+  margin: 0px;
+}
+
+.vantagem-itens img {
+  padding: 5px;
+  align-self: center;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer p {
+  text-align: center;
+  background-color: white;
+  margin: 0;
+  padding: 10px 0px;
 }
