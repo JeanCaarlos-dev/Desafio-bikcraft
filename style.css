@@ -98,7 +98,7 @@ p {
   text-align: right;
   place-self: center;
   color: var(--cinza-texto);
-  background-image: url(/img/onda.svg);
+  background-image: url(./img/onda.svg);
   background-size: 100%;
 }
 
