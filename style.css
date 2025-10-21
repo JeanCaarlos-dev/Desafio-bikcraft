@@ -99,6 +99,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 1px;
+  padding: 10px;
   border-left: 4px solid #ee221100;
 }
 
