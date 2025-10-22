@@ -164,6 +164,10 @@ footer p {
   body:not(.rodape) {
     margin: 0 1.25rem;
   }
+
+  .titulo-vantagens {
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 705px) {
