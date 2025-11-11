@@ -5,7 +5,7 @@
   --cor-destaque: #ee2211;
   --cor-destaque-escuro: #990000;
   --cor-texto: #000;
-  --onda: url("./img/onda_clara.svg");
+  --onda: url("../img/onda_clara.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@
     --cor-fundo-2: #000;
     --cor-texto: #fff;
     --cor-subtitulo: rgba(255, 255, 255, 0.2);
-    --onda: url("./img/onda_escura.svg");
+    --onda: url("../img/onda_escura.svg");
   }
 }
 
