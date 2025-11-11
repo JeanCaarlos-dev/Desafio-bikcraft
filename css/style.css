@@ -1,24 +1,38 @@
 :root {
-  --cinza-fundo: #f7f7f7;
-  --cinza-texto: #c6c6c6;
-  --vermelho: #ee2211;
+  --cor-fundo: #f7f7f7;
+  --cor-fundo-2: #ffffff;
+  --cor-subtitulo: rgba(0, 0, 0, 0.2);
+  --cor-destaque: #ee2211;
+  --cor-destaque-escuro: #990000;
+  --cor-texto: #000;
+  --onda: url("./img/onda_clara.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #111;
+    --cor-fundo-2: #000;
+    --cor-texto: #fff;
+    --cor-subtitulo: rgba(255, 255, 255, 0.2);
+    --onda: url("./img/onda_escura.svg");
+  }
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--cinza-fundo);
+  background-color: var(--cor-fundo);
   margin: 0;
+  color: var(--cor-texto);
 }
 
 .cabecalho {
   max-width: 62rem;
   margin: 0px auto 2.5rem auto;
-  text-align: center;
 }
 
-.cabecalho > .titulo {
-  width: 15rem;
-  margin: 2.5rem;
+.cabecalho svg {
+  display: block;
+  margin: 50px auto;
 }
 
 .menu {
@@ -43,13 +57,13 @@ p {
 }
 
 .menu a {
-  background-color: white;
-  color: black;
+  background-color: var(--cor-fundo-2);
+  color: var(--cor-texto);
   border: 2px solid #ffffff00;
 }
 
 .menu a:hover {
-  border: 2px solid var(--vermelho);
+  border: 2px solid var(--cor-destaque);
 }
 
 .container-principal {
@@ -61,7 +75,7 @@ p {
 }
 
 .conteudo-bikcraft {
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   place-content: center;
   justify-items: right;
   text-align: right;
@@ -73,18 +87,18 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background-color: var(--vermelho);
+  background-color: var(--cor-destaque);
   position: absolute;
   top: 1.8rem;
   left: 47.2%;
 }
 
 .conteudo-bikcraft a {
-  background-color: var(--vermelho);
+  background-color: var(--cor-destaque);
   color: white;
 }
 .conteudo-bikcraft a:hover {
-  background-color: #aa2211;
+  background-color: var(--cor-destaque-escuro);
 }
 
 .foto-bikcraft {
@@ -100,15 +114,16 @@ p {
   font-size: 4.5rem;
   text-align: right;
   place-self: center;
-  color: var(--cinza-texto);
-  background-image: url(./img/onda.svg);
-  background-size: 100%;
+  color: var(--cor-subtitulo);
+  background: var(--onda) repeat center;
+  background-size: contain;
+
   padding: 1.5rem;
 }
 
 .vantagens {
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   margin: 0;
   list-style: none;
 }
@@ -123,11 +138,11 @@ p {
 }
 
 .vantagem-itens:nth-child(odd) {
-  background-color: var(--cinza-fundo);
+  background-color: var(--cor-fundo);
 }
 
 .vantagem-itens:hover {
-  border-left: 4px solid var(--vermelho);
+  border-left: 4px solid var(--cor-destaque);
   transition: 0.2s;
 }
 
@@ -155,7 +170,7 @@ footer {
 
 footer p {
   text-align: center;
-  background-color: white;
+  background-color: var(--cor-fundo-2);
   margin: 0;
   padding: 0.62rem 0px;
 }
