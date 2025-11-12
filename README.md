@@ -1,4 +1,4 @@
-Bikcraft | Desafio de Estrutura e Estilo
+Primeira versão do site Bikcraft | Desafio de Estrutura e Estilo
 
 Este projeto foi desenvolvido como parte do curso HTML e CSS para Iniciantes da Origamid.
 
